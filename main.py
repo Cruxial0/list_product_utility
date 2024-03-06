@@ -10,7 +10,7 @@ def format_input(data: str) -> list[str]:
 def get_unique_instances(data: list[str]) -> list[str]:
     unique_instances = []
     for line in data:
-        clean_line = line.lstrip()
+        clean_line = line.lstrip().rstrip()
         if clean_line in unique_instances:
             continue
         unique_instances.append(clean_line)
